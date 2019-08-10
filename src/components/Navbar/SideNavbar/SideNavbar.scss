@@ -1,0 +1,94 @@
+$colors: (
+  primary: #ffffff,
+  secondary: #b0b0b0,
+  sidenav-picker-border:#6fcf3d,
+  sidenav-picker-bg:#181a27,
+  sidenav:#30394c,
+  sidenav-content:#95a5a6,
+  layout-bg:#efefef
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+@mixin sidenav-controller($width,$span-content:false){
+
+  width: $width;
+  height: 550px;
+  background-color: color(sidenav);
+  z-index: 1;
+  transition: .1s ease;
+
+          ul li{
+              padding: 15px 20px;
+              color:color(primary);
+              display: flex;
+              overflow: hidden;
+              &:hover{ background-color:color(secondary)}
+
+                      img{
+                          width:16px;
+                          height: 16px;
+                      }
+
+                    
+
+                      span{
+                        @if $span-content{
+                          display: block;
+                          color: color(sidenav-content);
+                          font-size: 8pt;
+                          font-weight: bold;
+                          margin-left: 20px;
+                          line-height: 22px;
+                          
+                      }
+                      @else{
+                        display:none
+                      }
+                    }                               
+          }
+}
+
+@mixin layout-controller($width,$margin-left){
+  .container-flex-right-layout {
+    top: 0;
+    width: $width;
+    margin-left: $margin-left;
+    position: absolute;
+    background-color:color(layout-bg) ;
+    height: 620px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transition: 0.1s ease;
+  }
+}
+
+
+
+.container-flex{
+    display: flex;
+    width: 100%;
+
+    .sidenav-container {
+          @include sidenav-controller(5%,$span-content:false)            
+      }
+    .sidenav-container-toggled{
+      @include sidenav-controller(15%,$span-content:true) 
+    }
+}
+
+.sidenav-picked{
+    border-right:4px solid color(sidenav-picker-border) ;
+    background-color:color(sidenav-picker-bg);
+  }
+
+#sidenav-container {
+  @include layout-controller(96%,5%)
+
+}
+  #sidenav-container-toggled {
+    @include layout-controller(86%,15%)
+  } 
+

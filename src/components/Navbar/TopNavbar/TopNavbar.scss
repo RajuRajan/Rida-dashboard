@@ -1,0 +1,125 @@
+$colors: (
+  primary: #ffffff,
+  secondary: #ccc,
+  alert: rgb(250, 19, 19)
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+.topnav-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: color(primary);
+  line-height: 20px;
+  position: relative;
+  z-index: 5000;
+
+  .topnav-container-left-container {
+    float: left;
+    width: 50%;
+    display: flex;
+    img {
+      width: 30px;
+      height: 20px;
+    }
+    div {
+      padding: 25px 5px;
+      width: 120px;
+      cursor: pointer;
+      text-align: center;
+
+      &:hover {
+        background-color: color(secondary);
+      }
+    }
+    .logo__img {
+        padding: 0%;
+        width: 170px;
+            img {
+                width: 155px;
+                height: 60px;
+                padding: 5px 0px;
+            }
+    }
+    .bar__img {
+      width: 60px;
+    }
+
+    .add-new-city {
+      display: flex;
+      padding: 0%;
+
+      .add-city-img {
+        width: 15%;
+
+        img {
+          height: 15px;
+          width: 15px;
+         
+        }
+      }
+      .add-city-caption {
+        width: 85%;
+      }
+    }
+  }
+
+  .topnav-container-right-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    img {
+      width: 20px;
+      height: 20px;
+    }
+    div {
+      cursor: pointer;
+    }
+    .message-img {
+      padding: 25px 5px;
+      width: 50px;
+    }
+
+    .notification-container {
+      padding: 25px 5px;
+      width: 50px;
+      .notification {
+        color: color(primary);
+        text-decoration: none;
+        position: relative;
+        display: inline-block;
+        border-radius: 2px;
+
+        .badge {
+          
+          position: relative;
+          top: -10px;
+          right: 9px;
+          padding: 2.5px 4px;
+          border-radius: 50%;
+          background-color: color(alert);
+          color: color(primary);
+        }
+      }
+    }
+    .location {
+      padding: 25px 10px;
+      display: flex;
+      justify-content: space-around;
+      width: 98px;
+      span {
+        font-size: 9pt;
+      }
+    }
+    .dropdown {
+      padding: 0%;
+      height: 60px;
+      width: 206px;
+    }
+  }
+}

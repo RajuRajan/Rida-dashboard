@@ -1,0 +1,178 @@
+.row.duration-table {
+    margin: 0% 5%;
+    .col-12 {
+        text-align: center;
+        margin: 0 1%
+    }
+}
+
+.row.acc-table {
+    margin: 0 6%;
+    margin-top: 1%
+  }
+  
+  .row.row.acc-table .col-12 {
+    text-align: center
+  }
+
+
+.table-row1 {
+    height: 36px;
+    border-radius: 10px;
+    background-color: #d8d8d8;
+    font-weight: bold;
+}
+
+.table-row2 {
+    height: 54px;
+    background-color: #fcfcfc;
+}
+.duration-table tbody tr td {
+    border-right: 1px solid #c4bfbf;
+}
+
+.duration-table tbody tr td:last-child {
+    border: none
+}
+
+.duration-table-manager {
+    text-align: center;
+}
+
+.duration-table-manager tbody {
+    text-align: left
+}
+
+.duration-table-manager tbody tr td {
+    padding: 1% 1%;
+}
+
+.duration-table-manager .details {
+    width: 220px;
+    height: 130px;
+    color: #222222;
+    overflow-y: scroll;
+}
+
+.duration-table-manager tbody tr td {
+    border-right: 1px solid rgb(199, 196, 196);
+    border-bottom: 1px solid rgb(199, 196, 196);
+}
+
+.duration-table-manager tbody tr :last-child {
+    border-right: none;
+}
+
+
+.row.duration-table-manager {
+    margin: 1% 5%
+}
+
+
+.row.duration-table-manager .col-12 {
+    margin: 0 1%
+}
+
+
+.row.duration-table-manager-quotation {
+    margin:1% 6%;
+    text-align: center
+ }
+ .duration-table-manager-quotation tbody tr td:last-child{
+    padding: 0px !important
+ }
+
+
+
+
+
+
+
+
+.btn-prim {
+    width: 145px;
+    height: 42px;
+    border-radius: 5px;
+    border: solid 1.5px #222222;
+}
+
+.btn-sec {
+    width: 145px;
+    height: 42px;
+    border-radius: 5px;
+    background-color: #6fcf3d;
+    color: #ffffff;
+    border: none
+}
+
+.btn-sec-1 {
+    width: 185px;
+    height: 48px;
+    border-radius: 5px;
+    border: none;
+    background-color: #6fcf3d;
+    margin-left: 60px;
+    color: #ffffff
+}
+
+.btn-sec-2 {
+    width: 250px;
+    height: 48px;
+    border-radius: 5px;
+    border: none;
+    background-color: #6fcf3d;
+    color: #ffffff
+}
+
+.btn-sec-copy {
+    width: 145px;
+    height: 42px;
+    border-radius: 5px;
+    border: solid 1.5px #6fcf3d;
+    color: #000;
+ 
+}
+
+input[type=text]{
+    height: 100px;
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 10pt;
+    padding: 15% 15%
+}
+
+
+.custom-select {
+    height: 100px ;
+    width: 100% ;
+    outline: none!important;
+    border: none;
+    font-size: 10pt;
+    padding: 15% 15% ;
+  
+}
+
+
+a{
+    text-decoration: none;
+    color: #000
+}
+a:hover{
+    text-decoration: none;   
+}
+input:-internal-autofill-selected {
+    background-color: rgb(255, 255, 255) !important;
+    background-image: none !important;
+    color: rgb(0, 0, 0) !important;
+}
+
+.trash-edit .col-1.trash,.col-1.edit {
+    margin:0px 0px ;
+    padding: 0px;
+    cursor: pointer;
+    text-align: center
+}
+.trash-edit .col-1.edit img{
+  margin: 0px 10px
+}

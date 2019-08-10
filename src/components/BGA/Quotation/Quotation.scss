@@ -1,0 +1,119 @@
+$colors: (
+  primary: #ffffff,
+  green: #6fcf3d,
+  tab-primary: #2d153b,
+  tab-secondary: #b0b0b0
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+@mixin table-tab-selector($bg-color, $toggled: false) {
+  width: 237px;
+  height: 36px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background-color: $bg-color;
+  color: color(primary);
+  text-align: center;
+  line-height: 36px;
+
+  @if ($toggled) {
+    top: 0;
+    margin-left: 230px;
+    position: absolute;
+  } @else {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.header {
+  height: 35%;
+  background-color: color(primary);
+  padding-top: 84px;
+  padding-left: 20px;
+  padding-bottom: 15px;
+  display: flex;
+  span {
+    margin-left: 15px;
+  }
+
+  img {
+    width: 25px;
+    height: 25px;
+    margin-left: 36px;
+  }
+}
+
+/*-----------------------------table-tab-toggler---------------------------*/
+
+.rectangle {
+  @include table-tab-selector(color(tab-primary), $toggled: false);
+}
+.rectangle-toggle {
+  @include table-tab-selector(color(tab-secondary), $toggled: true);
+}
+
+
+/*------------comman css for tab contants--(create-quotation,itineraray,pricing,offer)---------------*/
+.container-fluid .row {
+  width: 90%;
+}
+
+.row.trash-edit {
+  margin: 0 4.7%;
+  margin-top: 3%;
+
+  .col-1.edit {
+    text-align: right;
+    cursor: pointer;
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .col-1.trash {
+    text-align: right;
+    cursor: pointer;
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.row.brief {
+  margin: 1% 6%
+}
+
+.row.hr {
+  margin: 1% 6%;
+  background-color: rgba(102, 102, 102, 0.5);
+  width: 89.9%;
+  height: 1px
+}
+
+.row.buttons-container {
+  margin: 1% 6%;
+}
+
+
+/*-----------------------tab selected---------------------------*/
+.selected {
+  background-color: color(green);
+  color: color(prim);
+}
+
+.selected::after {
+  content: " ";
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  background-color: color(green);
+  left: 50%;
+  transform: translateX(-50%) rotateZ(45deg);
+  top: 45px;
+}

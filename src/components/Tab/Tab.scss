@@ -1,0 +1,15 @@
+
+.layout-menu {
+    width: 100%;
+    height: auto;
+    background-color: #d8d8d8;
+    text-align: center;
+    padding: 0 15%;
+    line-height: 50px;
+    margin-top: 1%;
+    font-weight: bold;
+    
+    .col-3:hover{
+        cursor: pointer;
+    }
+}
